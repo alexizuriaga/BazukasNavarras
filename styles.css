@@ -1,0 +1,140 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Alinear verticalmente */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow: hidden; /* Para evitar el desplazamiento de la página */
+}
+
+#game-setup {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#game-setup label, #game-setup input, #game-setup button {
+    margin: 10px 0;
+    display: block;
+}
+
+#game-setup input {
+    padding: 8px;
+    width: 100px;
+    text-align: center;
+}
+
+#game-setup button {
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+#jugadores-container input {
+    margin: 5px;
+    padding: 8px;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+    max-width: 1000px; /* Ancho máximo de la tabla */
+    width: 100%; /* Ocupa el 100% del contenedor */
+    max-height: 400px; /* Altura máxima para la tabla */
+    overflow: auto; /* Permite el desplazamiento si es necesario */
+    margin: 0 auto;
+}
+
+/* Tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px; /* Espacio en las celdas */
+    text-align: center;
+    vertical-align: middle;
+    min-width: 100px; /* Ancho mínimo de las celdas */
+}
+
+th {
+    background-color: #0056b3;
+}
+
+tfoot {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+/* Botones */
+button {
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px; /* Tamaño del botón */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estado bloqueado de las celdas */
+.blocked {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.blocked:focus {
+    outline: none;
+}
+
+button.lock-button {
+    background-color: #dc3545;
+}
+
+button.lock-button:hover {
+    background-color: #c82333;
+}
+
+button.reset-button {
+    background-color: #28a745;
+    margin-left: 10px;
+}
+
+button.reset-button:hover {
+    background-color: #218838;
+}
+
+/* Mostrar/Ocultar botones */
+#reset-game {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+#reset-game:hover {
+    background-color: #138496;
+}
